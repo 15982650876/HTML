@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        padding: 10px;
+    }
+    #biao{
+            color: skyblue;
+            display: none;   
+        }
+    #xing{
+        color: pink;
+        display: none;
+    }
+    body button:nth-child(2){
+        margin-left: 98px;
+    }
+</style>
+<body>
+    <button onclick="showone()">打印乘法表</button>
+    <button onclick="showtwo()">打印星星</button>
+
+    <script>
+    
+        function showone(){
+            var biao=document.getElementById('biao');
+            var xing=document.getElementById('xing');
+            biao.style.display="block"
+            xing.style.display='none'
+            console.log('123')
+        }
+
+        function showtwo(){
+         
+            var xing=document.getElementById('xing');
+            var biao=document.getElementById('biao');
+            console.log('456')
+            xing.style.display="block"
+            biao.style.display="none"
+        }
+        document.write('<div id="biao">')
+        for(let i=1;i<=9;i++){
+            for(let j=1;j<=i;j++){   
+                document.write(i+'*'+j+'='+i*j+'&emsp;&emsp;') 
+            }
+            document.write('<br>')
+        }
+        document.write('</div>')
+
+        var rwo= prompt('输入要打印多少列星星：');
+      
+        document.write('<div id="xing">')
+            console.log(rwo)
+            for(let i=1;i<=rwo;i++){
+            for(let k=1;k<=rwo-i;k++){
+                document.write('&ensp;')
+            }
+            for(let j=1;j<=2*i-1;j++){
+                document.write('*')
+            }
+            for(let k=1;k<=rwo-i;k++){
+                document.write('&ensp;')
+            }
+            document.write('<br>')
+        }
+         document.write('</div>')
+    </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+
+/* 欢迎 */
+#top{
+	width: 100%;
+	border-bottom: solid 1px #e6e6e6;
+	font-size: 13px;
+	color: #868686;
+	/* line-height: 13px; */
+	padding-bottom: 14px;
+}
+/* 页头 */
+header h1{
+	font-size: 24px;
+	/* line-height: 28px; */
+}
+header h1 p{
+	font-size: 9px;
+	color: #b2b1a8;
+}
+header .search{
+	width: 1200px;
+	margin:auto;
+	background-color: aqua;
+}
+header input{
+	width: 320px;
+	height: 34px;
+	vertical-align: middle;
+	border: solid 2px #0575ec;
+}
+header button{
+	width: 82px;
+	height: 38px;
+	background-color: #0078ec;
+	border: solid 1px #0575ec;
+	
+}
+header form{
+	/* width: 500px; */
+	margin-right: 33%;
+	/* margin-top: 30px;
+	margin-bottom: 30px; */
+}
+header{
+	padding-top: 30px;
+	padding-bottom:30px ;
+}
+
+header .headerright span{
+	w
+	font-size: 11px;
+	color: #88847c;	
+}
+header .headerright p{
+	font-size: 18px;
+	font-weight: bold;
+}
+header .headerright{
+margin-top: -50px;
+}
+/* 导航 */
+#nav {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	
+}
+#banner{
+	position:relative;
+	
+}
+#nav ul{
+	height: 50px;
+	width: 100%;
+	background-color: blue;
+	/* float: left; */
+}
+#nav li{
+	float: left; 
+	width: 157px;
+	/* margin-left:117px ; */
+}

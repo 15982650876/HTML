@@ -1,0 +1,149 @@
+/* 头部 */
+header #top{
+	width: 7.5rem;
+	display: flex;
+	justify-content: center;
+}
+header #top .topnav{
+	width: 6.8rem;
+	display: flex;
+	justify-content: space-between;
+}
+header #top .topnav div:nth-child(1){
+	display: flex;
+}
+header #top .topnav div:nth-child(1) a{
+		font-size: 0.38rem;	
+		line-height: 1.2rem;	
+		color: #000000;
+}
+header #top .topnav div:nth-child(1) a:first-child{
+		color: #fd2852;
+		background: url(../img/nav_move.jpg) no-repeat center 80%;
+		margin-right: 0.54rem;
+}
+header #top .topnav>a{
+		font-size: 0.32rem;
+		line-height: 1.2rem;
+}
+/* 轮播 */
+main #banner img{
+	width: 7.5rem;
+	height: 4.34rem;
+}
+/* 功能区 */
+main #function{
+	margin-top: 0.34rem;
+	width: 7.5rem;
+	display: flex;
+	justify-content: center;
+}
+main #function .funnav{
+	width: 6.46rem;
+	display: flex;
+	justify-content: space-between;
+}
+main #function .funnav>div{
+	width: 1.15rem;
+	text-align: center;
+}
+main #function .funnav span{
+		display: block;
+		font-size: 0.26rem;	
+		line-height: 0.6rem;	
+		color: #000000;
+}
+/* 电视台直播区 */
+main #television{
+	width: 7.5rem;
+	display: flex;
+	justify-content: center;
+}
+main #television .tv a{
+	width: 6.8rem;
+	display:flex ;
+	justify-content: space-between;
+}
+main #television .tv div:nth-child(2) div:first-child{
+		display: flex;
+		justify-content: space-between;
+		margin-top: 0.15rem;
+}
+main #television .tv a div:nth-child(2) div:first-child h6{
+		font-size: 0.28rem;
+		line-height: 0.54rem;
+		color: #000000;
+}
+main #television .tv a div:nth-child(2) div:first-child span{
+	font-size: 0.26rem;
+	line-height: 0.54rem;
+}
+main #television .tv a div:nth-child(2) span:nth-child(2){
+		display: block;
+		font-size: 0.22rem;
+		line-height: 0.3rem;
+		letter-spacing: 0.02rem;
+		color: #999999;
+}
+main #television .tv a div:nth-child(2) span:nth-child(3){
+		font-size: 0.22rem;
+		line-height: 0.7rem;
+		color: #999999;
+
+}
+main #television .tv a div:nth-child(2){
+	width: 3.56rem;
+}
+main #television .tv a{
+	margin-bottom: 0.3rem;
+}
+main #television .tv a img{
+	width: 2.7rem;
+	height: 1.7rem;
+}
+/* 页脚 */
+footer .foot{
+	width: 7.5rem;
+	display: flex;
+	justify-content: space-around;
+}
+footer .foot a span{
+		font-size: 0.22rem;
+		line-height: 0.4rem;
+}
+footer .foot a{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	font-size: 0.4rem;
+	color: #999999;
+	letter-spacing: 0.02rem;
+}
+footer .foot a:nth-child(3){
+	color: #fb7296;
+}
+
+/* 适配 */
+body{
+	display: flex;
+	flex-direction: column;
+}
+header{
+	height: 1.2rem;
+	flex-shrink: 0;
+}
+main{
+	/* height: 20rem; */
+	/* background-color: skyblue; */
+	flex: 1;
+	overflow: auto;
+}
+nav{
+	height: 0.8rem;
+	flex-shrink: 0;
+	/* background-color:orange; */
+}
+html,body{
+	width: 100%;
+	height: 100%;
+}

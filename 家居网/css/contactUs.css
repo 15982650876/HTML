@@ -1,0 +1,12 @@
+#leftrightnav #conright .conp{
+		font-size: 15px;
+		line-height: 30px;
+		color: #a8a8a8;
+		border: solid 2px #f1f1f1;
+		overflow: hidden;
+		margin-top:36px ;
+		padding-top:34px ;
+		padding-left:23px ;
+		padding-bottom:22px ;
+		margin-bottom: 16px;
+}

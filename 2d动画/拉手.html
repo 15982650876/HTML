@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			div {
+				width: 400px;
+				height: 400px;
+				background-color: #111111;
+				position: relative;
+				margin: auto;
+			}
+
+			div img:nth-of-type(2) {
+				opacity: 1;
+				width: 100%;
+				height: 100%;
+			}
+
+			h2 {
+				color: deepskyblue;
+				font-size: 40px;
+				text-align: center;
+				opacity: 0;
+				position: absolute;
+				top: -40px;
+				left: 20%;
+				transition: 1s linear;
+			}
+
+			div img:first-of-type {
+				opacity: 0;
+				float: left;
+				position: absolute;
+				top: 50%;
+				left: 0px;
+				transition: 1s linear;
+			}
+
+			div img:last-of-type {
+				opacity: 0;
+				float: right;
+				position: absolute;
+				top: 55%;
+				right: 0px;
+				transition: 1s linear;
+			}
+
+			div:hover h2 {
+				opacity: 1;
+				position: absolute;
+				top: 50px;
+				left: 20%;
+			}
+
+			div:hover .fl {
+				opacity: 1;
+				position: absolute;
+				top: 50%;
+				left: 150px;
+			}
+
+			div:hover .ri {
+				opacity: 1;
+				position: absolute;
+				top: 55%;
+				right: 190px;
+			}
+
+			div:hover .tm {
+				opacity: 0.5;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<h2>商业资讯策划</h2>
+			<img src="img/images/l_o.png" class="fl">
+			<img src="img/images/box_img2.png" class="tm">
+			<img src="img/images/r_f.png" class="ri">
+		</div>
+	</body>
+</html>

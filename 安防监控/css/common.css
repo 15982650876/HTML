@@ -1,0 +1,31 @@
+/* 清除浮动 */
+.clearfix::after{
+	display: block;
+	content: '';
+	clear: both;
+	height: 0;
+	
+}
+a{
+	text-decoration: none !important;
+}
+/* 版心 */
+.container{
+	width: 1200px;
+	margin: 0 auto;
+	/* background-color: pink; */
+}
+/* 左浮动 */
+.fi{
+	float: left;
+}
+/* 右边浮动 */
+.ri{
+	float: right;
+}
+body{
+	min-width: 1200px;
+}
+img{
+	vertical-align: middle !important;
+}

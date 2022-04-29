@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			*{
+			margin: 0;
+			padding: 0;
+			}
+			html,body{
+				width: 100%;
+				height: 100%;
+			}
+			body{
+				background:url(img/images/tree.png) no-repeat center 100%;
+				position: relative;
+			}
+			img{
+				width: 200px;
+				height: 200px;
+				position: absolute;
+				top: 80%;
+				left: 0px;
+				animation: xr 3s infinite;
+			}
+			div{
+				font-size: 40px;
+				width: 90px;
+				background-color: yellow;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				animation: wm 3s infinite;
+			}
+			@keyframes xr{
+				0%{
+					position: absolute;
+					top: 80%;
+					left: 0px;
+				}
+				25%{
+					position: absolute;
+					top: 80%;
+					left:50%;
+				}
+				50%{
+					position: absolute;
+					top: 80%;
+					left:50%;
+				}
+				100%{
+					position: absolute;
+					top: 80%;
+					left:90%;
+				}
+			}
+		
+			@keyframes wm{
+				
+				0%{
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					opacity: 0;
+				}
+				25%{
+					position: absolute;
+					top: 80%;
+					left: 50%;
+					opacity: 0.5;
+				}
+				50%{
+					position: absolute;
+					top: 80%;
+					left: 50%;
+					opacity: 1;
+				}
+				100%{
+					position: absolute;
+					top: 80%;
+					left: 90%;
+					opacity: 1;
+				}
+			}
+		</style>
+	</head>
+	<body>
+			<img src="img/images/xr.png"width="200"height="200">
+		<div>
+			我是外卖
+		</div>
+	</body>
+</html>

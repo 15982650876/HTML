@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        div {
+            width: 400px;
+            height: 600px;
+            position: relative;
+            overflow: hidden;
+
+        }
+
+        #twodiv {
+            width: 400px;
+            height: 1200px;
+            animation: run 3s infinite linear;
+        }
+
+        div>div>img {
+            vertical-align: middle;
+            width: 100%;
+            height: 600px;
+            border: 0;
+
+        }
+
+        body>div>img {
+            z-index: 100;
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            bottom: 20px;
+            left: 40px;
+        }
+
+        @keyframes run {
+            0% {
+                margin-top: -600px;
+            }
+
+            100% {
+                margin-top: 0px;
+            }
+        }
+
+        p {
+            color: pink;
+            float: left;
+            width: 200px;
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="bigdiv">
+        <div id="twodiv">
+            <img src="https://upload-images.jianshu.io/upload_images/14016888-07ab84dec27c6612.png?imageMogr2/auto-orient/strip|imageView2/2/format/webp"
+                alt="">
+            <img src="https://upload-images.jianshu.io/upload_images/14016888-07ab84dec27c6612.png?imageMogr2/auto-orient/strip|imageView2/2/format/webp"
+                alt="">
+        </div>
+
+        <img id="image"
+            src="https://upload-images.jianshu.io/upload_images/14016888-e3d2f21c6e2cc265.png?imageMogr2/auto-orient/strip|imageView2/2/w/46/format/webp"
+            alt="">
+    </div>
+    <p></p>
+
+    <script>
+        //碰撞函数
+        function ifpz(div, graphArr, str) {
+            // console.log(graphArr.length);
+            for (let i = 0; i < graphArr.length; i++) {
+                let divminh = parseInt(div.style.top) || 0
+                let divminw = parseInt(div.style.left) || 0
+
+                let divmaxw = divminw + parseInt((window.getComputedStyle(div).width ||
+                    div.style.width))
+                let divmaxh = divminh + parseInt((window.getComputedStyle(div).width ||
+                    div.style.height))
+                let minw = parseInt(graphArr[i].style.left || 0)
+                let maxw = minw + parseInt((window.getComputedStyle(graphArr[i]).width ||
+                    graphArr[i].style.width))
+                let minh = parseInt(graphArr[i].style.top || 0)
+                let maxh = minh + parseInt((window.getComputedStyle(graphArr[i]).height ||
+                    graphArr[i].style.height))
+                if (div == graphArr[i])
+                    continue
+                let flagh
+                let flagw
+                if (divminw <= minw && divmaxw >= maxw && divminh <= minh && divmaxh >= maxh) {
+                    flagh = true
+                    flagw = true
+                } else if (divminh < minh && divmaxh > maxh) {
+                    flagh = true
+                    flagw = (divmaxw > minw && divmaxw < maxw) || (divminw < maxw && divminw > minw)
+                } else if (divminw < minw && divmaxw > maxw) {
+                    flagw = true
+                    flagh = (divmaxh > minh && divmaxh < maxh) || (divminh < maxh && divminh > minh)
+                } else {
+                    flagh = (divmaxh > minh && divmaxh < maxh) || (divminh < maxh && divminh > minh)
+                    flagw = (divmaxw > minw && divmaxw < maxw) || (divminw < maxw && divminw > minw)
+                }
+                if (flagh && flagw) {
+                    if (str == undefined)
+                        return false
+                    else
+                        return [div, graphArr[i]]
+                }
+            }
+            return true
+        }
+        //节点  所有节点  返回值
+        function adhesion(div, graphArr, str) {
+            let divs = ifpz(div, graphArr, str)
+            if (divs[0] == undefined || divs[1] == undefined)
+                return divs
+            str = parseInt(str)
+            if (Object.is(str, NaN)) {
+                return divs
+            }
+            let divminh = parseInt(divs[0].style.top) || 0
+            let divminw = parseInt(divs[0].style.left) || 0
+            let divmaxw = divminw + parseInt((window.getComputedStyle(divs[0]).width ||
+                divs[0].style.width))
+            let divmaxh = divminh + parseInt((window.getComputedStyle(divs[0]).width ||
+                divs[0].style.height))
+            let minw = parseInt(divs[1].style.left || 0)
+            let maxw = minw + parseInt((window.getComputedStyle(divs[1]).width ||
+                divs[1].style.width))
+            let minh = parseInt(divs[1].style.top || 0)
+            let maxh = minw + parseInt((window.getComputedStyle(divs[1]).height ||
+                divs[1].style.height))
+            if (maxw - divminw <= str) {
+                divs[0].style.left = `${maxw}px`
+            } else if (divmaxw - minw <= str) {
+                divs[0].style.left = `${minw-(divmaxw-divminw)}px`
+            }
+            console.log(divmaxh - minh)
+            if (divmaxh - minh <= 50 + str) {
+                divs[0].style.top = `${minh-(divmaxh-divminh)+50}px`
+            }
+        }
+        //按键控制函数
+        function key() {
+            window.document.onkeydown = function (e) {
+                var e = window.event;
+                var image = document.getElementById('image')
+                image.style.position = `absolute`
+                // console.log(e.keyCode)
+
+                if (e.keyCode == 87) {
+                    let top = image.offsetTop - 10
+                    //console.log(top)
+                    image.style.top = `${top}px`
+                } else if (e.keyCode == 83) {
+                    let top = image.offsetTop + 10
+                    //console.log(top)
+                    image.style.top = `${top}px`
+                } else if (e.keyCode == 68) {
+                    let left = image.offsetLeft + 10
+                    // console.log(left)
+                    image.style.left = `${left}px`
+                } else if (e.keyCode == 65) {
+                    let left = image.offsetLeft - 10
+                    //console.log(left)
+                    image.style.left = `${left}px`
+                }
+
+                if (e.keyCode == 13) {
+                    //创建一个节点
+                    let image2 = document.createElement('img')
+                    image2.setAttribute('src',
+                        `https://upload-images.jianshu.io/upload_images/14016888-ff389915bee91bc6.png?imageMogr2/auto-orient/strip|imageView2/2/w/5/format/webp`
+                        )
+                    image2.style.width = `5px`
+                    image2.style.height = `15px`
+
+                    //获取飞机的位置
+                    let feiji = document.querySelector('#image')
+                    let image = document.querySelector('#bigdiv')
+                    let a = parseInt(window.getComputedStyle(feiji).width) / 2
+                    let b = parseInt(window.getComputedStyle(feiji).height) / 2
+                    //console.log(feiji.offsetLeft,feiji.offsetTop)
+                    let x = feiji.offsetTop
+                    let y = feiji.offsetLeft
+                    //设置生成位置
+                    image2.style.position = `absolute`
+                    image2.style.left = `${y+a}px`
+                    image2.style.top = `${x-20}px`
+                    //  console.log(image2)
+                    let tmp = x - 20
+                    image.appendChild(image2)
+
+                    setInterval(function () {
+                        tmp -= 2
+                        image2.style.top = `${tmp}px`
+                        let dijis = document.querySelectorAll('.dj')
+                        //console.log(dijis)
+                        // console.log(adhesion(image2,dijis,'div')); 
+                        let djs = adhesion(image2, dijis, 'div')
+                        if (djs[1] != undefined) {
+                            djs[0].remove()
+
+                            djs[1].remove()
+                            tmm--
+                        }
+
+
+
+
+                        if (tmp == 10) {
+                            image2.remove()
+                        }
+                    }, 1)
+                }
+            }
+
+
+        }
+        //自己的飞机
+        key()
+
+
+
+        //获取随机数函数
+        function getrandom(m, n) {
+            let tmp = Math.max(m, n)
+            n = Math.min(m, n)
+            m = tmp
+            return math = Math.floor(Math.random() * (m - n) + n)
+        }
+        //加载敌机函数
+        function show() {
+            let bdiv = document.getElementById('bigdiv')
+            let div = document.createElement("div")
+            let top = getrandom(0, 100)
+            let left = getrandom(0, 300)
+            div.style.width = '100px'
+            div.style.height = '100px'
+            div.style.background =
+                'url(https://upload-images.jianshu.io/upload_images/14016888-0adefe141e94570f.png?imageMogr2/auto-orient/strip|imageView2/2/w/69/format/webp) no-repeat'
+            div.style.position = 'absolute'
+            djgj()
+            //敌机加载动作
+            function anmins() {
+
+                //随机x轴y轴移动
+                setInterval(function () {
+                    let is = getrandom(0, 13)
+
+                    //  console.log(is)
+                    if (is > 0 && is <= 3) {
+                        top += 5
+                        if (top <= 0) {
+                            div.style.top = `${0}px`
+
+                            // console.log(top)
+                        } else if (top > 500) {
+                            div.style.top = `${500}px`
+                            //console.log(top)
+
+                        } else
+
+                            div.style.top = `${top}px`
+
+                    } else if (is > 3 && is <= 6) {
+                        left -= 5
+                        if (left <= -50) {
+                            div.style.left = `${-50}px`
+
+                            // console.log(left)
+                        } else if (left > 500) {
+                            div.style.left = `${500}px`
+
+                            // console.log(left)
+                        } else
+                            div.style.left = `${left}px`
+
+
+                    } else if (is > 6 && is <= 9) {
+                        left += 5
+                        if (left <= -50) {
+                            div.style.left = `${-50}px`
+
+                            // console.log(left)
+                        } else if (left > 500) {
+                            div.style.left = `${500}px`
+
+                            // console.log(left)
+                        } else {
+                            div.style.left = `${left}px`
+
+                        }
+
+
+                    } else if (is > 9 && is <= 13) {
+                        top -= 5
+                        if (top <= 0) {
+                            div.style.top = `${0}px`
+
+                            // console.log(top)
+                        } else if (top > 500) {
+                            div.style.top = `${500}px`
+
+                            // console.log(top)
+                        } else
+                            div.style.top = `${top}px`
+
+                    }
+                }, 100)
+
+
+            }
+            anmins()
+            //敌机发炮函数
+            function djgj() {
+
+                let set1 = setInterval(function () {
+                    let dijis = document.querySelectorAll('.dj')
+                    let bdiv = document.getElementById('bigdiv')
+                    let image2 = document.createElement('img')
+                    image2.setAttribute('src',
+                        `https://upload-images.jianshu.io/upload_images/14016888-78f4b7ce15c74a8c.png?imageMogr2/auto-orient/strip|imageView2/2/w/63/format/webp`
+                        )
+                    image2.style.width = `5px`
+                    image2.style.height = `15px`
+                    //设置生成位置
+                    image2.style.position = `absolute`
+                    image2.style.left = `${left+50}px`
+                    image2.style.top = `${top+100}px`
+                    // console.log(top,left)
+
+                    // console.log(image3)//w
+                    // console.log(image2)//p
+                    let tmp = top + 100
+                    bdiv.appendChild(image2)
+
+                    setInterval(function () {
+                        let str = []
+                        tmp += 10
+                        image2.style.top = `${tmp}px`
+                        let image = document.querySelector('#bigdiv')
+                        let image3 = document.querySelector('#image')
+                        str.push(image3)
+                        let pp = document.querySelector('p')
+
+                        let djs = adhesion(image2, str, 'div')
+                        //console.log(djs)
+                        if (djs[1] != undefined) {
+                            //dis[1].remove()
+                            pp.innerHTML = `你死了`
+
+                        }
+
+                    }, 100)
+
+
+                    if (tmp == 500) {
+                        image2.remove()
+                    }
+                }, 1500)
+
+            }
+            div.setAttribute('class', `dj`)
+            bdiv.appendChild(div)
+        }
+
+
+        //控制敌机数量
+        var tmm = 0
+
+        function show1(n) {
+            let setin = setInterval(function () {
+
+                if (tmm <= 5) {
+                    show()
+
+                    tmm++
+                }
+                //console.log(tmp)
+            }, n)
+        }
+        show1(1000)
+    </script>
+
+</body>
+
+</html>

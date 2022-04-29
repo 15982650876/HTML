@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			
+		label{
+			/* width: 100px; */
+			/* background-color: #00FFFF; */
+			position: relative;
+			/* float: left; */
+			/* overflow: hidden; */
+		}
+		label input{
+			display: none;
+		}
+		label div:nth-child(2){
+			width: 20px;
+			height: 20px;
+			border: solid 2px pink;
+			border-radius: 50%;
+			float: left;
+		}
+		label div:nth-child(3){
+			width: 15px;
+			height: 5px;
+			border-left: solid 2px pink;
+			border-bottom: solid 2px pink;
+			transform: rotate(-45deg);
+			position: absolute;
+			top: 6px;
+			left: 2px;
+			float: left;
+			display: inline;
+			display: none;
+		}
+		label div:nth-child(4){
+			float: left;
+		}
+		
+		label input:checked~.two{
+			background-color: #7E7CE5;
+		}
+		label input:checked~.three{
+			display: block;
+		}
+		</style>
+	</head>
+	<body>
+		<label>
+			<input type="checkbox" name="" id="" value="" />
+			<div class="two"></div>
+			<div class="three"></div>
+			<div >
+				C
+			</div>	
+		</label>
+		<label>
+			<input type="checkbox" name="" id="" value="" />
+			<div class="two"></div>
+			<div class="three"></div>
+			<div >
+				C
+			</div>
+			
+		</label>
+		<label>
+			<input type="checkbox" name="" id="" value="" />
+			<div class="two"></div>
+			<div class="three"></div>
+			<div >
+				C
+			</div>
+			
+		</label>
+		<label>
+			<input type="checkbox" name="" id="" value="" />
+			<div class="two"></div>
+			<div class="three"></div>
+			<div >
+				C
+			</div>
+			
+		</label>
+	</body>
+</html>

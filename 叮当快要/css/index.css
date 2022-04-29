@@ -1,0 +1,307 @@
+a{
+	text-decoration: none !important;
+	color: #000000 !important;
+}
+/* 头部 */
+#top{
+	width: 7.5rem;
+	/* height: 0.88rem; */
+	background-color: #e94544;
+	padding-top: 0.3rem;
+	color: #FFFFFF;
+	padding-bottom:0.2rem ;
+}
+#top .topwelocme{
+	width: 7.5rem;
+	display: flex;
+	justify-content: space-around;
+	color: #FFFFFF;
+}
+#top .lefttop span{
+	font-size: 0.2rem;
+	line-height: 0.3rem;
+}
+#top .righttop span{
+	font-size: 0.2rem;
+	line-height: 0.3rem;
+}
+#top .ritop span{
+	font-size: 0.2rem;
+	line-height: 0.3rem;
+}
+#top .midtop p{
+	width: 6.1rem;
+	font-size: 0.24rem;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	line-height: 0.28rem;
+}
+/* 搜索框 */
+#top .botoomsuoso{
+	width: 7.5rem;
+	display: flex;
+	justify-content: center;
+	margin-top:0.2rem ;
+	text-align: center;
+	line-height: 0.6rem;
+}
+#top .botoomsuoso span{
+	color: #8f8f94;
+	font-size: 0.3rem;
+}
+#top .botoomsuoso div:first-child{
+	width: 0.7rem;
+	height: 0.6rem;
+	/* border: solid 0.01rem #FFFDEF; */
+	background-color: #FFFFFF;
+	border-radius: 0.3rem 0rem 0rem 0.3rem;
+}
+#top .botoomsuoso input:only-of-type{
+	width: 5.55rem;
+	height: 0.58rem;
+	border: solid 0.01rem #FFFFFF;
+	outline: 0rem;
+	flex: 1;
+}
+#top .botoomsuoso div:last-child{
+	width: 0.7rem;
+	height: 0.6rem;
+	/* border: solid 0.01rem #FFFDEF; */
+	background-color: #FFFFFF;
+	border-radius: 0rem 0.3rem 0.3rem 0rem;
+}
+/* 导航 */
+#nav{
+	width: 7.5rem;
+	margin-top: 0.13rem;
+	/* background-color: pink; */
+	display: flex;
+	justify-content: center;
+}
+#nav .navcontainer{
+	width: 6.5rem;
+	height: 1.35rem;
+	/* background-color:blue; */
+	display: flex;
+	justify-content:space-between;
+	text-align: center;
+	line-height: 0.5rem;
+	font-size: 0.24rem;
+	color: #4f4f4f;
+}
+#notice{
+	width: 7.5rem;
+	/* background-color: pink; */
+	display: flex;
+	justify-content: center;
+}
+#notice .nottitle{
+	width: 6.5rem;
+	display: flex;
+	justify-content: flex-start;
+}
+#notice .nottitle h3{
+	color: #e94544;
+	font-size: 0.26rem;
+	font-style: oblique;
+	line-height: 0.5rem;
+}
+#notice .nottitle span{
+	color: #333333;
+	font-size: 0.23rem;
+	margin-left: 0.15rem;
+	letter-spacing: 0.02rem;
+	line-height: 0.5rem;
+}
+/* 介绍 */
+#introduced{
+	width: 7.5rem;
+	height: 1rem;
+	display: flex;
+	justify-content: center;
+}
+#introduced .describes{
+	width: 7.07rem;
+	height: 0.77rem;
+	background-color: #fff8ee;
+	display: flex;
+	justify-content: space-around;
+	border-radius: 0.1rem;
+}
+#introduced .describes div{
+	display: flex;
+	color: #e94544;
+	line-height: 0.8rem;
+}
+#introduced .describes div span{
+	font-size: 0.28rem;
+}
+#introduced .describes div p{
+	font-size: 0.22rem;
+	margin-left: 0.15rem;
+}
+/* 分类 */
+#classify{
+	width: 7.5rem;
+	display: flex;
+	justify-content: center;
+}
+#classify .categorydiv{
+	width: 7.2rem;
+}
+#classify .categorydiv{
+	display: flex;
+	justify-content: space-between;
+}
+#classify .leftcate{
+	display: flex;
+	width: 3.4rem;
+	justify-content: space-between;
+}
+#classify .leftcatep div{
+	width: 1.2rem;
+	height: 0.26rem;
+	background-color: #ff5a60;
+	font-size: 0.2rem;
+	color: #fffcfc;
+	border-radius: 0.1rem 0rem 0.1rem 0rem;
+	text-align: center;
+	margin-bottom: 0.3rem;
+}
+#classify .leftcate h4{
+	font-size: 0.28rem;
+	color: #444444;
+	width:1.73rem;
+	margin-left: 0.28rem;
+	line-height: 0.48rem;
+}
+#classify .leftcate p{
+	font-size: 0.22rem;
+	color: #8a8a8a;
+	margin-left: 0.28rem;
+}
+/* 功能 */
+#function{
+	width: 7.5rem;
+	display: flex;
+	justify-content: center;
+	border-bottom: solid 0.01rem #efeff4;
+	padding-bottom:0.41rem ;
+	margin-top:0.2rem ;
+}
+#function .features{
+	margin-top:0.1rem ;
+	width: 6.4rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+#function .features div{
+	width: 1.29rem;
+	height: 1.29rem;
+	text-align: center;
+}
+#function .features p{
+	font-size: 0.25rem;
+	line-height: 0.58rem;
+}
+/* 详情 */
+#detail{
+	width: 7.5rem;
+	display: flex;
+	justify-content: center;
+	padding-top: 0.24rem;
+}
+#detail .dateacon{
+	width: 7.15rem;
+	display: flex;
+}
+#detail .dateacon .dateap{
+	margin-left: 0.2rem;
+}
+#detail .dateacon h5 span{
+	width: 0.84rem;
+	height: 0.32rem;
+	background-color: #ff5a5f;
+	border-radius: 0.03rem;
+	font-size: 0.25rem;
+	color: #ffffff;
+	margin-right:0.1rem ;
+}
+#detail .dateacon h5{
+	font-size: 0.25rem;
+}
+#detail .dateacon p{
+	font-size: 0.2rem;
+	color: #888888;
+	margin-top: 0.26rem;
+	margin-bottom: 0.22rem;
+}
+#detail .databu{
+	display: flex;
+	justify-content: space-between;
+}
+#detail .databu div{
+	font-size: 0.2rem;
+	color: #e94948;
+	border: solid 0.01rem #e94645;
+	border-radius: 0.05rem;
+	padding-left: 0.1rem;
+	padding-right: 0.1rem;
+	padding-top: 0.06rem;
+	padding-bottom:0.06rem ;
+}
+#detail .jige{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 0.2rem;
+}
+#detail .jige div:first-child span:first-child{
+	color: #e94544;
+	font-size: 0.24rem;
+	font-weight: 500;
+}
+#detail .jige div:first-child  span:last-child{
+	color: #888888;
+	font-size: 0.14rem;
+	text-decoration: line-through;
+}
+#detail .jige div:last-child div{
+	color: #e94544;
+	font-size: 0.3rem;
+}
+/* 广告 */
+#ads{
+	width: 7.5rem;
+	height: 3.3rem;
+	margin-top: 0.2rem;
+	margin-bottom: 1rem;
+	border-bottom: solid 0.01rem #dddddd;
+}
+/* 页脚 */
+#footer{
+	border-top: solid 0.01rem #dddddd;
+	width: 7.5rem;
+	height: 1.04rem;
+	background-color: #ffffff;
+	display: flex;
+	justify-content: space-around;
+	text-align: center;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+}
+#footer div figure a span{
+	font-size: 0.38rem;
+}
+#footer div figure figcaption{
+	font-size: 0.15rem;
+}
+/* hongbao */
+#hongbao{
+	position: fixed;
+	left:6.2rem;
+	top: 50%;
+	
+}

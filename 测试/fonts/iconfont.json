@@ -1,0 +1,37 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "7041503",
+      "name": "网红帅哥",
+      "font_class": "wanghongshuaige",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
+    {
+      "icon_id": "10130836",
+      "name": "可回收-玻璃类",
+      "font_class": "kehuishou-bolilei",
+      "unicode": "e61f",
+      "unicode_decimal": 58911
+    },
+    {
+      "icon_id": "10135145",
+      "name": "其他垃圾-一次性餐具",
+      "font_class": "qitalaji-yicixingcanju",
+      "unicode": "e631",
+      "unicode_decimal": 58929
+    },
+    {
+      "icon_id": "11847423",
+      "name": "美女",
+      "font_class": "meinv",
+      "unicode": "e649",
+      "unicode_decimal": 58953
+    }
+  ]
+}

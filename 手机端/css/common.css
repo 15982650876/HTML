@@ -1,0 +1,48 @@
+/* 标题 */
+#maintitle {
+	width: 7.5rem;
+	display: flex;
+	justify-content: space-between;
+}
+#maintitle a:first-child{
+		font-size: 0.36rem;
+		line-height: 1.2rem;
+		color: #000000;
+		margin-left:0.3rem;
+}
+#maintitle a:nth-child(2) span{
+		font-size: 0.28rem;	
+		line-height: 1.2rem;	
+		color: #999999;
+}
+#maintitle a:nth-child(2){
+	margin-right: 0.24rem;
+}
+/* 直播区 */
+main #broadcast {
+	width: 7.5rem;
+	display: flex;
+	justify-content: center;
+}
+main #broadcast .live{
+	width: 6.83rem;
+	display: flex;
+	justify-content: space-between;
+}
+main #broadcast .live h6{
+		font-size: 0.3rem;	
+		color: #000000;
+		margin-top: 0.22rem;
+}
+main #broadcast .live span{
+		font-size: 0.24rem;
+		color: #999999;
+		margin-top:0.1rem;
+}
+main #broadcast .live a img{
+	width: 3.36rem;
+	height: 2.05rem;
+}
+main #broadcast .live a{
+	padding-right: 0.2rem;
+}

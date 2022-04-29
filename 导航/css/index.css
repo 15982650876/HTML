@@ -1,0 +1,62 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.nav{
+	width: 1500px;
+	height: 500px;
+	/* background-color: aqua; */
+	margin: 0 auto;
+	margin-top: 10%;
+	/* border: solid 10px pink; */
+	
+}
+.nav .pic1{
+	background:center center no-repeat url(../img/OIP-C2.jpg);
+/* 	background-image: url(../img/OIP-C4.jpg); */
+	height: 1000px;
+	width: 100%;
+	background-attachment: fixed;
+	overflow: hidden;
+	/* margin: 0 auto; */
+	
+		
+}
+.nav .pic2{
+	background:center center no-repeat url(../img/OIP-C4.jpg);
+	/* background-image: url(../img/OIP-C2.jpg); */
+	height: 1000px;
+	width: 100%;
+	background-attachment: fixed;
+	margin: 0 auto;
+	overflow: hidden;
+
+	
+	
+}
+.nav .pic3{
+	background:center center no-repeat url(../img/OIP.jpg);
+/* 	background-image: url(../img/OIP.jpg); */
+	height: 1000px;
+	width: 100%;
+	background-attachment: fixed;
+	margin: 0 auto;
+	overflow: hidden;
+		
+
+}
+.nav .p1{
+	width: 50%;
+	height: 100px;
+	margin: 0 auto;
+	background-color: rgba(123,122,125,0.3);
+}
+#xiangkuang{
+	width: 49%;
+	height: 420px;
+	border:solid 10px pink;
+	position: fixed;
+	top: 25%;
+	left: 25%;
+	margin-top: -40px;
+}

@@ -1,0 +1,132 @@
+/* 版心 */
+.container{
+	width: 1500px;
+	/* background-color: pink; */
+	margin: 0 auto;
+}
+/* 清除浮动 */
+.clearfix::after{
+	display: block;
+	content: '';
+	clear: both;
+	height: 0;
+	
+}
+/* 左浮 */
+.left{
+	float: left;
+}
+/* 右浮 */
+.right{
+	float: right;
+	}
+/* 欢迎 */
+#top{
+	border-bottom: solid 1px #f0f0f0;
+}
+#top ul {
+	padding-top: 12px;
+	padding-bottom: 10px;
+}
+#top ul li{
+	box-shadow: 1px 0 #99a6c4 inset;
+	float: left;
+	height: 15px;
+	padding-left: 30px;
+	padding-right: 25px;
+	border-left: solid 1px #9999b3;
+	border-right:solid 1px  #ebc5a6;
+}
+#top ul li span{
+	color: #ff98ab;
+	font-size: 15px;
+}
+#top ul li a{
+	font-size: 13px;
+	color: #999999;
+	text-decoration: none;
+	/* background-color: #55A532; */
+	/* line-height: 38px; */
+}
+ul li:first-child{
+	border-left:0px !important;
+	box-shadow: 0px 0 #9999b3 inset !important;
+	/* background-color: #0086B3; */
+}
+ul li:last-child{
+	border-right:0px !important;
+}
+/* 页头*/
+.icon-mogujie1{
+	font-size: 60px;
+	color: #ff4466;
+	margin-top: 9px;
+} 
+header span{
+	float: left;
+}
+header span:nth-child(2){
+	/* color: red; */
+	font-size: 18px;
+	line-height: 60px;
+	margin-left: 39px;
+	text-shadow: 1px 0 #336db0;
+}
+header input{
+	width: 618px;
+	height: 60px;
+	background-color: #f7f7f7;
+	border: 0;
+	margin-left:97px;
+	padding-left: 10px;
+	vertical-align: top;
+	overflow: hidden;
+	
+}
+header button{
+	width: 66px;
+	height: 60px;
+	background-color: #8d8d8d;
+	border: 0px;
+	border-radius: 0px 8px 8px 0px;
+	padding-left:15px;
+	margin-right:20px ;
+}
+header button .icon-sousuo{
+	 
+	font-size: 29px;
+	color: #f9f9f9 !important;
+	/* text-align: center center; */
+}
+header div{
+	margin-top: 10px;
+}
+header a figure{
+	float: left;
+	text-align: center;
+	color: #333333;
+	margin-left: 10px;
+}
+header figure figcaption{
+	font-size: 13px;	
+}
+header figure span{
+	font-size: 29px !important;
+}
+header a:nth-last-of-type(2) figure{
+	width: 28px;
+}
+/* header a:nth-last-of-type(3) span{
+	background-color: #595959;
+} */
+header a:last-child span{
+	color: #ffe1e7;
+	font-size: 38px;
+}
+header a:last-child{
+	font-size: 18px;
+	line-height: 38px;
+	color: #333333;
+	margin-top: 10px;
+	text-decoration: none;
+}

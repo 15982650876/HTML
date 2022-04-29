@@ -1,0 +1,32 @@
+/* 左侧导航 */
+#leftrightnav ul li{
+	height: 75px;
+	padding-top: 25px;
+}
+#leftrightnav #newsright{
+	/* border: solid 1px pink; */
+	overflow: hidden;
+}
+#leftrightnav #newsright div h6{
+		font-size: 15px;
+		line-height: 38px;
+		color: #606369;
+}
+#leftrightnav #newsright div span{
+		font-size: 12px;
+		line-height: 38px;
+		color: #a5a5b1;
+}
+#leftrightnav #newsright div p{	
+		font-size: 12px;
+		line-height: 38px;
+		color: #a5a5b1;
+}
+#leftrightnav #newsright div{
+	border-bottom:solid 2px #eeeeee;
+}
+#leftrightnav #newsright .rightlistp{
+	margin-top:64px ;
+	margin-bottom:92px ;
+	text-align: center;
+}

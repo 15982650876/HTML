@@ -1,0 +1,33 @@
+/* 清除浮动 */
+.clearfix:after{
+	display: block;
+	content: '';
+	clear: both;
+	height: 0;
+}
+/* 去掉a标签下划线 */
+a{
+	text-decoration: none !important;
+	border: 0px;
+}
+/* 版心 */
+.container{
+	width: 1200px;
+	margin: 0 auto;
+	/* background-color: pink; */
+}
+/* 左浮动 */
+.fi{
+	float: left;
+}
+/* 右浮动 */
+.ri{
+	float: right;
+}
+body{
+	min-width: 1200px;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+}
